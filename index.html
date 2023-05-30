@@ -1,10 +1,10 @@
-<form>
+<!-- <form>
   <input type="text" id="name" placeholder="Entrez votre nom">
   <button onclick="afficherNom()">Envoyer</button>
-</form>
+</form> -->
 
 <!-- Page 2: Affichage du nom sans échappement -->
-<script>
+<!-- <script>
   function afficherNom() {
     var nom = document.getElementById("name").value;
     var message = "Bonjour, " + nom + "!";
@@ -12,4 +12,26 @@
   }
 </script>
 
-<div id="display"></div> 
+<div id="display"></div>  -->
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+      <meta charset="utf-8" />
+    </head>
+    <body>
+        <h1>Mon super moteur de recherche</h1>
+
+        <?php
+        if(!empty($_GET['keyword']))
+        {
+            echo "Résultat(s) pour le mot-clé : ".$_GET['keyword'];
+        } 
+        ?>
+
+        <form type="get" action="">
+            <input type="text" name="keyword" />
+            <input type="submit" value="Rechercher" />
+        </form>
+    </body>
+</html>
