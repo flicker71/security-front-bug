@@ -13,25 +13,37 @@
 </script>
 
 <div id="display"></div>  -->
-
 <!DOCTYPE html>
-<html lang="fr">
-    <head>
-      <meta charset="utf-8" />
-    </head>
-    <body>
-        <h1>Mon super moteur de recherche</h1>
+<html>
+<head>
+<title>Exemple de faille XSS</title>
+</head>
+<body>
+<h1>Exemple de faille XSS</h1>
 
-        <?php
-        if(!empty($_GET['keyword']))
-        {
-            echo "Résultat(s) pour le mot-clé : ".$_GET['keyword'];
-        } 
-        ?>
+<form>
+<label for="inputText">Entrez votre texte :</label>
+<input type="text" id="inputText" name="inputText">
 
-        <form type="get" action="">
-            <input type="text" name="keyword" />
-            <input type="submit" value="Rechercher" />
-        </form>
-    </body>
+<input type="submit" value="Soumettre">
+</form>
+
+<script>
+var form = document.querySelector('form');
+form.addEventListener('submit', function(event) {
+event.preventDefault();
+
+var inputText = document.getElementById('inputText').value;
+document.write("<p>Vous avez saisi : " + inputText + "</p>");
+
+window.setTimeout(function() {
+window.location.reload();
+}, 5000);
+});
+</script>
+<script>
+alert('totot');
+</script>
+
+</body>
 </html>
