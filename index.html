@@ -1,0 +1,15 @@
+<form>
+  <input type="text" id="name" placeholder="Entrez votre nom">
+  <button onclick="afficherNom()">Envoyer</button>
+</form>
+
+<!-- Page 2: Affichage du nom sans échappement -->
+<script>
+  function afficherNom() {
+    var nom = document.getElementById("name").value;
+    var message = "Bonjour, " + nom + "!";
+    document.getElementById("display").innerHTML = message;
+  }
+</script>
+
+<div id="display"></div>
