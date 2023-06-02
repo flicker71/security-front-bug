@@ -1,18 +1,3 @@
-<!-- <form>
-  <input type="text" id="name" placeholder="Entrez votre nom">
-  <button onclick="afficherNom()">Envoyer</button>
-</form> -->
-
-<!-- Page 2: Affichage du nom sans échappement -->
-<!-- <script>
-  function afficherNom() {
-    var nom = document.getElementById("name").value;
-    var message = "Bonjour, " + nom + "!";
-    document.getElementById("display").innerHTML = message;
-  }
-</script>
-
-<div id="display"></div>  -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,21 +14,7 @@
 <input type="submit" value="Soumettre">
 </form>
 
-<script>
-var form = document.querySelector('form');
-form.addEventListener('submit', function(event) {
-event.preventDefault();
-
-var inputText = document.getElementById('inputText').value;
-document.write("<p>Vous avez saisi : " + inputText + "</p>");
-
-window.setTimeout(function() {
-window.location.reload();
-}, 5000);
-});
-</script>
-<script>
-alert('totot');
+<script src="main.js">
 </script>
 <!-- Juste un commentaire -->
 </body>
