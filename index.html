@@ -1,21 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Exemple de faille XSS</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-<h1>Exemple de faille XSS</h1>
-<!-- Test new workflow avec snyk qui continue malgrés l'erreur sdfghj -->
-
-<form>
-<label for="inputText">Entrez votre texte :</label>
-<input type="text" id="inputText" name="inputText">
-
-<input type="submit" value="Soumettre">
-</form>
-
-<script src="main.js">
-</script>
-<!-- Juste un commentaire -->
+    <script src="/main.js">
+    </script>
 </body>
 </html>
